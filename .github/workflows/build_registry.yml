@@ -51,5 +51,5 @@ jobs:
           fi
           git commit -m "🎉 Update registry.yml"
           branch=$(echo $GITHUB_REF | awk -F'/' '{print $3}')
-          console.log("branch: ", branch)
+          echo "Pushing to $branch"
           git push origin HEAD:$branch
